@@ -26,5 +26,5 @@ TEST_F(ioTest, outputMessage){
     string testMessage = "Konsequenz heißt auch Holzwege zu Ende zu gehen.";
     UserIO cli;
     cli.writeOutput(testMessage);
-    EXPECT_EQ (testMessage,testOutBuffer.str());    
+    EXPECT_EQ (testMessage+"\n",testOutBuffer.str());    
 }
