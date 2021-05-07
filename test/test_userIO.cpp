@@ -28,3 +28,13 @@ TEST_F(ioTest, outputMessage){
     cli.writeOutput(testMessage);
     EXPECT_EQ (testMessage+"\n",testOutBuffer.str());    
 }
+
+TEST_F(ioTest, promptUserInput){
+    // Test case for getting input from the user
+    string question = "Was ist dein Lieblingszitat?";
+    string userResponse = "Konsequenz heißt auch Holzwege zu Ende zu gehen.";
+    UserIO cli;
+    string response = cli.promptUserInput(question);
+    EXPECT_EQ (question+"\n",testOutBuffer.str());   
+    EXPECT_EQ (userResponse,response);   
+}
