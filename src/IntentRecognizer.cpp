@@ -7,5 +7,11 @@ string IntentRecognizer::identifyIntent(string userInput){
                 {"What is the weather like in Paris today?","Get Weather City"},
                 {"Tell me an interesting fact.","Get Fact"}
     };
-    return(intentMapping[userInput]);
+    
+    auto result = intentMapping.find(userInput);
+    if (result != intentMapping.end()) {
+        return(result->second);
+    } else {
+        return("DEFAULT");
+    }
 }
