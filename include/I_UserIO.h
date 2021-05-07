@@ -12,8 +12,8 @@ using namespace std;
 
 class I_UserIO{
     public:
-        string promptUserInput(string promptMessage);
-        void writeOutput(string messageOutput);
+        virtual string promptUserInput(string promptMessage) = 0;
+        virtual void writeOutput(string messageOutput) = 0;
 };
 
 #endif // INTENT_RECOGNITION_INCLUDE_INTERFACE_USER_IO_H
