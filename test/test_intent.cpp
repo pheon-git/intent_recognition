@@ -37,3 +37,4 @@ TEST_F(IntentTest, identifyIntentUnknown){
     string unmatchedIntent = "DEFAULT";
     EXPECT_EQ (recognizer.identifyIntent(unmatchedInput),  unmatchedIntent);
 }
+

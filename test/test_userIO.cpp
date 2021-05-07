@@ -34,6 +34,7 @@ TEST_F(ioTest, promptUserInput){
     string question = "Was ist dein Lieblingszitat?";
     string userResponse = "Konsequenz heißt auch Holzwege zu Ende zu gehen.";
     UserIO cli;
+    testInBuffer.str(userResponse);
     string response = cli.promptUserInput(question);
     EXPECT_EQ (question+"\n",testOutBuffer.str());   
     EXPECT_EQ (userResponse,response);   

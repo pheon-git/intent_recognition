@@ -7,5 +7,10 @@ void UserIO::writeOutput(string messageOutput){
 }
 
 string UserIO::promptUserInput(string promptMessage){
-    return("");
+    string returnString;
+
+    cout << promptMessage << endl;    
+    getline(cin, returnString);
+    
+    return(returnString);
 }
