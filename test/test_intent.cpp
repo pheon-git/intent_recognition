@@ -30,3 +30,10 @@ TEST_F(IntentTest,identifyIntent){
     }
     
 }
+
+TEST_F(IntentTest, identifyIntentUnknown){
+    IntentRecognizer recognizer;
+    string unmatchedInput = "42";
+    string unmatchedIntent = "DEFAULT";
+    EXPECT_EQ (recognizer.identifyIntent(unmatchedInput),  unmatchedIntent);
+}
