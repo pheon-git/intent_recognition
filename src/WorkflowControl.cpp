@@ -19,9 +19,12 @@ void WorkflowControl::welcomeMessage(){
 void WorkflowControl:: serveUser(){
     while(true){
         string question, response;
-        question = userInterface->promptUserInput("How may I be of service?\n");
+        question = userInterface->promptUserInput("How may I be of service?");
         response = intentRecognizer->identifyIntent(question);
-        if(response != "DEFAULT") break;
+        if(response != "DEFAULT"){
+            userInterface->writeOutput(response);
+            break;
+        } 
     }
 }
 
