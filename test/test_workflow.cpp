@@ -57,5 +57,7 @@ TEST_F(workflowTest, callHMI){
         .WillOnce(testing::Return("Test Intent"));
     EXPECT_CALL(hmi, writeOutput(testing::_))
         .Times(2);
+        
+    controller.startWorkflow();
 }
 
